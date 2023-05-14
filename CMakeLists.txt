@@ -49,6 +49,13 @@ if(AUTOGRAD_BUILD_EXAMPLES)
 	add_subdirectory(examples)
 endif()
 
+# Build the tests
+option(AUTOGRAD_BUILD_TESTS "Build tests" ON)
+if(AUTOGRAD_BUILD_TESTS)
+	add_subdirectory(tests)
+endif()
+
+
 install(TARGETS autograd
         EXPORT autogradTargets)
 
